@@ -51,3 +51,28 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 		StringMap: stringMap,
 	})
 }
+
+// Reservation renders the make a reservation page and displays form
+func (m *Repository) Reservation (w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "make-reservation.page.tmpl", &models.TemplateData{})
+}
+
+// Warlocks renders the warlocks room page
+func (m *Repository) Warlocks (w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "warlocks.page.tmpl", &models.TemplateData{})
+}
+
+// Warriors renders the warriors room page
+func (m *Repository) Warriors (w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "warriors.page.tmpl", &models.TemplateData{})
+}
+
+// Availability renders the availability page
+func (m *Repository) Availability (w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "search-availability.page.tmpl", &models.TemplateData{})
+}
+
+// Contact renders the contact page
+func (m *Repository) Contact (w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "contact.page.tmpl", &models.TemplateData{})
+}
