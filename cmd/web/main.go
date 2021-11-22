@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/stephenmontague/go-bnb/pkg/config"
-	"github.com/stephenmontague/go-bnb/pkg/handlers"
-	"github.com/stephenmontague/go-bnb/pkg/render"
+	"github.com/stephenmontague/go-bnb/internal/config"
+	"github.com/stephenmontague/go-bnb/internal/handlers"
+	"github.com/stephenmontague/go-bnb/internal/render"
 )
 
 const portNumber = ":8080"

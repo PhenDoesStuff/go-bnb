@@ -5,8 +5,8 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/stephenmontague/go-bnb/pkg/config"
-	"github.com/stephenmontague/go-bnb/pkg/handlers"
+	"github.com/stephenmontague/go-bnb/internal/config"
+	"github.com/stephenmontague/go-bnb/internal/handlers"
 )
 
 func routes(app *config.AppConfig) http.Handler {
@@ -20,9 +20,13 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Get("/about", handlers.Repo.About)
 	mux.Get("/warlocks-lair", handlers.Repo.Warlocks)
 	mux.Get("/warriors-den", handlers.Repo.Warriors)
+
 	mux.Get("/search-availability", handlers.Repo.Availability)
+	mux.Post("/search-availability", handlers.Repo.PostAvailability)
+	mux.Post("/search-availability-json", handlers.Repo.AvailabilityJSON)
+
 	mux.Get("/contact", handlers.Repo.Contact)
-	
+
 	mux.Get("/make-reservation", handlers.Repo.Reservation)
 
 	fileServer := http.FileServer(http.Dir("./static"))
