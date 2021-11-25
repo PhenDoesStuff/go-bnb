@@ -10,15 +10,19 @@ import (
 	"github.com/stephenmontague/go-bnb/internal/render"
 	"log"
 	"net/http"
+	"os"
 	"time"
 )
 
 const portNumber = ":8080"
+
 var app config.AppConfig
 var session *scs.SessionManager
+var infoLog *log.Logger
+var errorLog *log.Logger
 
 // main is the main application function
-func main() {	
+func main() {
 	err := run()
 	if err != nil {
 		log.Fatal(err)
@@ -27,7 +31,7 @@ func main() {
 	fmt.Printf("Starting application on port %s \n", portNumber)
 
 	srv := &http.Server{
-		Addr: portNumber,
+		Addr:    portNumber,
 		Handler: routes(&app),
 	}
 
@@ -41,6 +45,12 @@ func run() error {
 
 	// change this to true when in production
 	app.InProduction = false
+
+	infoLog = log.New(os.Stdout, "INFO: \t", log.Ldate|log.Ltime)
+	app.InfoLog = infoLog
+
+	errorLog = log.New(os.Stdout, "ERROR: \t", log.Ldate|log.Ltime|log.Lshortfile)
+	app.ErrorLog = errorLog
 
 	// SCS is a package that helps us set up a session so people aren't logged out immediately
 	session = scs.New()
