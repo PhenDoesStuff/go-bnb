@@ -1,0 +1,22 @@
+mode: set
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:24.47,28.2 1 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:31.33,33.2 1 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:36.67,42.2 3 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:45.68,57.2 5 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:60.75,69.2 4 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:72.79,74.16 2 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:79.2,92.19 6 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:102.2,104.66 2 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:74.16,77.3 2 0
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:92.19,100.3 3 0
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:108.72,110.2 1 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:113.72,115.2 1 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:118.76,120.2 1 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:123.80,128.2 3 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:136.80,143.16 3 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:147.2,150.14 3 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:143.16,145.3 1 0
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:154.71,156.2 1 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:159.81,161.9 2 1
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:168.2,174.4 4 0
+github.com/stephenmontague/go-bnb/internal/handlers/handlers.go:161.9,166.3 4 1

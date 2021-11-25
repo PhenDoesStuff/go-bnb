@@ -19,13 +19,13 @@ var theTests = []struct{
 	params []postData
 	expectedStatusCode int
 }{
-	{"home", "/", "Get", []postData{}, http.StatusOK},
-	{"about", "/about", "Get", []postData{}, http.StatusOK},
-	{"wl", "/warlocks-lair", "Get", []postData{}, http.StatusOK},
-	{"wd", "/warriors-den", "Get", []postData{}, http.StatusOK},
-	{"sa", "/search-availability", "Get", []postData{}, http.StatusOK},
-	{"contact", "/contact", "Get", []postData{}, http.StatusOK},
-	{"mr", "/make-reservation", "Get", []postData{}, http.StatusOK},
+	{"home", "/", "GET", []postData{}, http.StatusOK},
+	{"about", "/about", "GET", []postData{}, http.StatusOK},
+	{"wl", "/warlocks-lair", "GET", []postData{}, http.StatusOK},
+	{"wd", "/warriors-den", "GET", []postData{}, http.StatusOK},
+	{"sa", "/search-availability", "GET", []postData{}, http.StatusOK},
+	{"contact", "/contact", "GET", []postData{}, http.StatusOK},
+	{"mr", "/make-reservation", "GET", []postData{}, http.StatusOK},
 	{"post-search-availability", "/search-availability", "POST", []postData{
 		{key: "start", value: "2021-01-01"},
 		{key: "end", value: "2021-01-02"},
