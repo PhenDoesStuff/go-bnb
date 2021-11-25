@@ -5,6 +5,7 @@ import (
 	"github.com/alexedwards/scs/v2"
 	"github.com/stephenmontague/go-bnb/internal/config"
 	"github.com/stephenmontague/go-bnb/internal/models"
+	"log"
 	"net/http"
 	"os"
 	"testing"
@@ -21,6 +22,12 @@ func TestMain(m *testing.M) {
 
 	// change this to true when in production
 	testApp.InProduction = false
+
+	infoLog := log.New(os.Stdout, "INFO: \t", log.Ldate|log.Ltime)
+	testApp.InfoLog = infoLog
+
+	errorLog := log.New(os.Stdout, "ERROR: \t", log.Ldate|log.Ltime|log.Lshortfile)
+	testApp.ErrorLog = errorLog
 
 	// SCS is a package that helps us set up a session so people aren't logged out immediately
 	session = scs.New()

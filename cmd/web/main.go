@@ -6,6 +6,7 @@ import (
 	"github.com/alexedwards/scs/v2"
 	"github.com/stephenmontague/go-bnb/internal/config"
 	"github.com/stephenmontague/go-bnb/internal/handlers"
+	"github.com/stephenmontague/go-bnb/internal/helpers"
 	"github.com/stephenmontague/go-bnb/internal/models"
 	"github.com/stephenmontague/go-bnb/internal/render"
 	"log"
@@ -72,8 +73,8 @@ func run() error {
 
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)
-
 	render.NewTemplates(&app)
+	helpers.NewHelpers(&app)
 
 	return nil
 }
